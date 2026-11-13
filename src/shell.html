@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhysLab — Interactive Physics Laboratory | Virtual lab for BTech Engineering Physics practicals: 8 experiments, simulations, viva bank, quizzes and lab records. Works offline.</title>
+<meta name="description" content="PhysLab is a virtual physics laboratory for first-year BTech Engineering Physics practicals: 8 experiments with theory, derivations, labelled and wiring diagrams, interactive simulations, a calculation workspace with graphs, viva bank, quizzes, flashcards, handwritten notes and printable lab records. Works fully offline.">
+<meta name="application-name" content="PhysLab">
+<meta name="apple-mobile-web-app-title" content="PhysLab">
+<meta property="og:title" content="PhysLab — Interactive Physics Laboratory">
+<meta property="og:description" content="PhysLab is a virtual physics laboratory for first-year BTech Engineering Physics practicals: 8 experiments with theory, derivations, labelled and wiring diagrams, interactive simulations, a calculation workspace with graphs, viva bank, quizzes, flashcards, handwritten notes and printable lab records. Works fully offline.">
+<!--__FAVICON__-->
+<meta name="theme-color" content="#0a0c11">
+<!--__VENDOR_HEAD__-->
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<a class="skip-link" href="#view">Skip to content</a>
+<canvas id="ambient" aria-hidden="true"></canvas>
+<div id="intro" hidden aria-hidden="true">
+  <div class="intro-core">
+    <svg class="intro-atom" viewBox="0 0 120 120"><defs><linearGradient id="ig" x1="0" x2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset=".55" stop-color="#3b82f6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+      <g fill="none" stroke="url(#ig)" stroke-width="2.2"><ellipse class="orb o1" cx="60" cy="60" rx="52" ry="19"/><ellipse class="orb o2" cx="60" cy="60" rx="52" ry="19" transform="rotate(60 60 60)"/><ellipse class="orb o3" cx="60" cy="60" rx="52" ry="19" transform="rotate(120 60 60)"/></g>
+      <circle cx="60" cy="60" r="7" fill="#fff"/></svg>
+    <div class="intro-word">PHYSLAB</div>
+    <div class="intro-sub">Interactive Physics Laboratory</div>
+    <div class="intro-line"><i></i></div>
+  </div>
+</div>
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation"></aside>
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="main">
+    <header class="topbar" id="topbar">
+      <div class="scroll-bar" id="scrollBar" aria-hidden="true"></div>
+      <button class="icon-btn only-mobile" id="menuBtn" aria-label="Open navigation"><i data-lucide="menu"></i></button>
+      <div class="crumbs" id="crumbs" aria-live="polite"></div>
+      <div class="topbar-right">
+        <button class="search-trigger" id="searchBtn" aria-label="Search (Ctrl+K)"><i data-lucide="search"></i><span>Search experiments, formulas, viva…</span><kbd>Ctrl K</kbd></button>
+        <button class="goal-chip" id="goalChip" aria-label="Today’s study goal" title="Today’s study goal"></button>
+        <button class="icon-btn" id="annotBtn" aria-label="Annotate this page with a stylus" title="Annotate page (stylus / pen)"><i data-lucide="pen-tool"></i></button>
+        <button class="icon-btn" id="themeBtn" aria-label="Switch theme"><i data-lucide="sun"></i></button>
+        <button class="icon-btn bell" id="bellBtn" aria-label="Notifications" aria-haspopup="true" aria-expanded="false"><i data-lucide="bell"></i></button>
+        <button class="avatar-btn" id="avatarBtn" aria-label="Account menu" aria-haspopup="true" aria-expanded="false"></button>
+        <button class="pomo-chip" id="pomoChip" hidden aria-label="Focus timer running — open timer"><span class="pomo-dot"></span><span id="pomoChipTime">25:00</span></button>
+      </div>
+    </header>
+    <main id="view" tabindex="-1"></main>
+    <footer class="app-foot no-print" id="appFoot"></footer>
+  </div>
+</div>
+<div class="palette" id="palette" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="palette-box">
+    <div class="palette-input"><i data-lucide="search"></i><input id="paletteInput" type="text" placeholder="Search experiments, formulas, viva questions…" autocomplete="off" aria-label="Search query"><kbd>Esc</kbd></div>
+    <div class="palette-results" id="paletteResults" role="listbox"></div>
+  </div>
+</div>
+<div class="modal" id="modal" hidden role="dialog" aria-modal="true"></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<noscript><div style="padding:40px;color:#fff;font-family:sans-serif">PhysLab needs JavaScript enabled.</div></noscript>
+<!--__VENDOR_BODY__-->
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>
